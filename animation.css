@@ -1,0 +1,50 @@
+/* Animações para elementos ao rolar a página */
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .feature,
+  .reason,
+  .about-text,
+  .about-image,
+  .mentor-info {
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .feature.animate-in,
+  .reason.animate-in,
+  .about-text.animate-in,
+  .about-image.animate-in,
+  .mentor-info.animate-in {
+    animation: fadeInUp 0.8s forwards;
+  }
+  
+  /* Adicione um pequeno atraso para elementos em sequência */
+  .feature:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .feature:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  .feature:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  
+  .reason:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .reason:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  .reason:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  
