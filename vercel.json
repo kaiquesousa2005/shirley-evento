@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/despertar", "destination": "/index.html" },
+    { "source": "/despertar/", "destination": "/index.html" }
+  ]
+}

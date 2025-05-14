@@ -66,3 +66,20 @@ document.addEventListener('DOMContentLoaded', function() {
       window.scrollTo({ top: 0, behavior: 'auto' });
     }, 0);
   });
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Verifica se a URL contém "/despertar"
+  const isDespertarPath = window.location.pathname.includes('/despertar');
+  
+  // Seleciona os botões de ingresso (tanto na hero section quanto na limited-spots section)
+  const heroButton = document.querySelector('.hero .cta-button');
+  const limitedSpotsButton = document.querySelector('#limited-spots .cta-button');
+  
+  if (isDespertarPath) {
+    // Link para quando estiver na rota /despertar
+    ingressoButton.href = "https://chk.eduzz.com/R9JJVZK89X"; //ALTERAR O LINK DEPOIS
+// Altera os links dos botões
+    if (heroButton) heroButton.href = despertarLink;
+    if (limitedSpotsButton) limitedSpotsButton.href = despertarLink;
+      }
+});
