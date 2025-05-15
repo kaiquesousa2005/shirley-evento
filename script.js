@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   if (isDespertarPath) {
     // Link para quando estiver na rota /despertar
-    ingressoButton.href = "https://chk.eduzz.com/R9JJVZK89X"; //ALTERAR O LINK DEPOIS
+    ingressoButton.href = "https://sun.eduzz.com/E05XDYZDWX"; //ALTERAR O LINK DEPOIS
 // Altera os links dos botões
     if (heroButton) heroButton.href = despertarLink;
     if (limitedSpotsButton) limitedSpotsButton.href = despertarLink;
