@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
-
       const target = document.querySelector(this.getAttribute('href'));
       if (target) {
         target.scrollIntoView({
@@ -43,14 +42,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Adiciona classe para animação ao scroll
+  // Scroll animation
   const animateOnScroll = function () {
     const elements = document.querySelectorAll('.feature, .reason, .about-text, .about-image, .mentor-info');
-
     elements.forEach(element => {
       const elementPosition = element.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
-
       if (elementPosition < windowHeight * 0.85) {
         element.classList.add('animate-in');
       }
@@ -58,23 +55,22 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   window.addEventListener('scroll', animateOnScroll);
-  animateOnScroll(); // Executa uma vez no carregamento
+  animateOnScroll();
+
+  // ✅ Corrigir links apenas se for na página /despertar
+  const isDespertarPath = window.location.pathname.includes('/despertar');
+  if (isDespertarPath) {
+    const despertarLink = "https://sun.eduzz.com/E05XDYZDWX";
+    const limitedSpotsButton = document.querySelector('#limited-spots .cta-button');
+    if (limitedSpotsButton) {
+      limitedSpotsButton.href = despertarLink;
+    }
+    // ⚠️ NÃO altere o .hero .cta-button aqui
+  }
 });
 
 window.addEventListener('load', () => {
   setTimeout(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });
   }, 0);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const isDespertarPath = window.location.pathname.includes('/despertar');
-  const heroButton = document.querySelector('.hero .cta-button');
-  const limitedSpotsButton = document.querySelector('#limited-spots .cta-button');
-
-  if (isDespertarPath) {
-    const despertarLink = "https://sun.eduzz.com/E05XDYZDWX"; //ALTERAR O LINK DEPOIS
-    if (heroButton) heroButton.href = despertarLink;
-    if (limitedSpotsButton) limitedSpotsButton.href = despertarLink;
-  }
 });
