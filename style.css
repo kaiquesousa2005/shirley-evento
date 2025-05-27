@@ -648,6 +648,7 @@ footer {
   .reason-icon img {
     width: 70px;
     height: 70px;
+    margin-left: 0;
   }
 
   .hero-content {
