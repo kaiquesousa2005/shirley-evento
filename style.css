@@ -156,13 +156,15 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(254, 254, 254, 0.164)), url("./hero-bg.webp");
+  background-color: #111; /* fallback rápido */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(254, 254, 254, 0.164)), url("./hero-bg.webp");
   background-size: cover;
   background-position: center;
   color: #fff;
   padding: 150px 0 180px;
   position: relative;
 }
+
 
 .hero-content {
   max-width: 600px;
